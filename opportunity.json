@@ -1,0 +1,31 @@
+{
+	  "opportunityId": 2,	
+	  "entityType": "hotel",
+	  "entityId": 316242,
+	  "arrival": "2018-12-03",
+	  "departure": "2018-12-04",
+	  "numOfNights": 1,
+	  "board": "BB",
+	  "price": 100,
+	  "operator": "LTE",
+	  "currency": "USD",
+	  "filter": "FREE_CANCELATION",
+	  "payAtTheHotel": true,
+	  "onRequest": false,
+	  "showSpecialDeals": false,
+	  "getPackageRates": false,
+	  "countryCode": "IL",
+	  "adultsCount": "2",
+	  "defaultCurrency": "USD",
+	  "push": true,
+	  "active": true,
+	  "pushInfo": 
+	  {
+		"hotelCode": 891,
+		"bookingLimit": 1,
+		"invTypeCode": "classic",
+		"ratePlanCode": "BAR",
+		"price": 120,
+		"status": "Open"	  
+	  }	  
+	}

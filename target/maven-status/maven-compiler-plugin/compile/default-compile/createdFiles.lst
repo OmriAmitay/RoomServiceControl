@@ -1,0 +1,11 @@
+com\roomservice\entity\Operator.class
+com\roomservice\controller\Application.class
+com\roomservice\dao\MongoDao.class
+com\roomservice\entity\OpportunitySubject.class
+com\roomservice\entity\Filter.class
+com\roomservice\entity\LifeCycle.class
+com\roomservice\entity\OpportunityFormData.class
+com\roomservice\entity\PushInfo.class
+com\roomservice\controller\OpportunityController.class
+com\roomservice\controller\ExceptionHandlingController.class
+com\roomservice\entity\Currency.class

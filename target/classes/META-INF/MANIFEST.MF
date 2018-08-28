@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: RoomServiceControl
+Implementation-Version: 1.0.0
+Built-By: user
+Implementation-Vendor-Id: com.roomservice.control
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/RoomServiceC
+ ontrol/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.roomservice.controller.Application
+

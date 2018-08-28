@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+	
+	<!-- <img th:src="@{/images/logo.png}" alt="Room-Service" style="margin-left: 615px; width: 375px; height: 125px" /> -->
+
+	<h1 style="margin-left: 294px; margin-top: 60px; color: #ffc107e0;">Please Insert Your Opportunity</h1>
+	
+    <form action="#" th:action="@{/control/addOportunity}" th:object="${opportunityForm}" method="post">
+    	
+    	<div id="main" style="width: 1200px; float: left; clear: none; margin-left: 150px;">
+    	
+	    	<h3 style="margin-left: 148px;">Opportunity Details:</h3>
+	    	
+		    	<div id="triplets" style="width:1100px; height: 315px; margin-left: 150px;">
+			    	
+			    	<div style="width:300px; float:left;">
+				    	<p>Opportunity Id: <input type="text" th:field="*{opportunityId}" th:readonly="readonly"/></p>
+				        <p>Entity Type: <input type="text" th:field="*{entityType}" /></p>
+						<p>Entity Id: <input type="text" th:field="*{entityId}" /></p>
+						<p>Adults Count: <input type="text" th:field="*{adultsCount}"  th:readonly="readonly"/></p>
+					</div>
+					
+					<div style="width:300px; float:left; ">
+						<p>Arrival (yyyy-MM-dd): <input type="text" th:field="*{arrival}" /></p>
+						<p>Departure (yyyy-MM-dd): <input type="text" th:field="*{departure}" /></p>
+						<p>Num Of Nights: <input type="text" th:field="*{numOfNights}" th:readonly="readonly"/></p>
+						<p>Board: <input type="text" th:field="*{board}" /></p>
+					</div>
+					
+					<div style="width:300px; float:left; ">
+						<p>Price: <input type="text" th:field="*{price}" /></p>
+						<p>Operator: <input type="text" th:field="*{operator}" /></p>
+						<p>Currency: <input type="text" th:field="*{currency}" /></p>
+						<p>Country Code: <input type="text" th:field="*{countryCode}" /></p>
+					</div>
+					
+					<div id="space" style="padding=100px;"></div>
+				
+				</div>
+				
+				<div id="space" style="padding=20px;"></div>
+				
+				<h3 style="margin-left: 148px;">Sell Details:</h3>
+				
+				<div id="triplets" style="width:1100px; height: 220px; margin-left: 150px;">
+			    	
+			    	<div style="width:300px; float:left;">
+				    	<p>Hotel Code: <input type="text" th:field="*{pushInfo.hotelCode}" /></p>
+						<p>Booking Limit: <input type="text" th:field="*{pushInfo.bookingLimit}" /></p>
+						<p>Push: <input type="text" th:field="*{push}" /></p>
+					</div>
+					
+					<div style="width:300px; float:left; ">
+						<p>InvType Code: <input type="text" th:field="*{pushInfo.invTypeCode}" /></p>
+					    <p>Rate Plan Code: <input type="text" th:field="*{pushInfo.ratePlanCode}" /></p>
+					</div>
+					
+					<div style="width:300px; float:left; ">
+						<p>Price: <input type="text" th:field="*{pushInfo.price}" /></p>
+						<p>Status: <input type="text" th:field="*{pushInfo.status}" /></p>
+					</div>
+					
+				</div>	
+				
+				<p style="margin-left:150px;"><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+				
+				
+				<!-- <div id="double" style="width:300px; float:left; clear:none; margin-left: 150px;">
+				
+					<div style="width:300px; float:left; clear:none; margin-left: 150px;">		
+					
+						<p>price: <input type="text" th:field="*{price}" /></p>
+						<p>operator: <input type="text" th:field="*{operator}" /></p>
+						<p>currency: <input type="text" th:field="*{currency}" /></p>
+						<p>filter: <input type="text" th:field="*{filter}" th:readonly="readonly"/></p>
+					</div>	
+				
+					<div style="width:300px; float:left; clear:none; margin-left: 150px;">
+						<p>adultsCount: <input type="text" th:field="*{adultsCount}"  th:readonly="readonly"/></p>
+						<p>board: <input type="text" th:field="*{board}" /></p>
+						<p>countryCode: <input type="text" th:field="*{countryCode}" /></p>
+						<p>defaultCurrency: <input type="text" th:field="*{defaultCurrency}" th:readonly="readonly"/></p>
+						<p>payAtTheHotel: <input type="text" th:field="*{payAtTheHotel}" th:readonly="readonly"/></p>
+						<p>showSpecialDeals: <input type="text" th:field="*{showSpecialDeals}" th:readonly="readonly"/></p>
+						<p>onRequest: <input type="text" th:field="*{onRequest}" th:readonly="readonly"/></p>
+						<p>getPackageRates: <input type="text" th:field="*{getPackageRates}" /></p>
+				
+						<p>active: <input type="text" th:field="*{active}" /></p>
+			 
+			 		</div>
+			 		
+			 	</div>	 -->
+		 		
+	 	</div>	
+	 		
+		<!-- <select id="segmentoSel" class="form-control" th:field="*{operator}">
+			<option value="">Select Operator:</option>
+		    <option th:each="operator : ${T(com.roomservice.entity.Operator).values()}"
+		            th:value="${operator}"
+		            th:text="${operator}">
+		    </option>
+		</select> -->
+		
+		<!-- <h3>Hotel Connect (Push) Details:</h3>
+		
+		<p>push: <input type="text" th:field="*{push}" /></p>
+		<p>hotelCode: <input type="text" th:field="*{pushInfo.hotelCode}" /></p>
+		<p>bookingLimit: <input type="text" th:field="*{pushInfo.bookingLimit}" /></p>
+		<p>invTypeCode: <input type="text" th:field="*{pushInfo.invTypeCode}" /></p>
+		<p>ratePlanCode: <input type="text" th:field="*{pushInfo.ratePlanCode}" /></p>
+		<p>price: <input type="text" th:field="*{pushInfo.price}" /></p>
+		<p>status: <input type="text" th:field="*{pushInfo.status}" /></p>
+		
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p> -->
+        
+    </form>
+</body>
+</html>
