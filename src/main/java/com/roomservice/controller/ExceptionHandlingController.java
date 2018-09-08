@@ -1,4 +1,4 @@
-package com.roomservice.controller;
+/*package com.roomservice.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -29,4 +29,4 @@ public class ExceptionHandlingController {
 		return mav;
 	}
 
-}
+}*/
